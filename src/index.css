@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tactical-bg: #0f172a;
+  --color-tactical-card: #1e293b;
+  --color-tactical-olive: #3f6212;
+  --color-tactical-accent: #fbbf24;
+  --color-tactical-border: #334155;
+  
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-tactical-bg text-slate-200 font-sans;
+    background-image: 
+      radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
+
+.tactical-grid {
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.glass-panel {
+  @apply bg-tactical-card/80 backdrop-blur-md border border-tactical-border;
+}
+
+.military-btn {
+  @apply px-6 py-2 rounded-sm font-mono uppercase tracking-wider transition-all border-2;
+}
+
+.military-btn-primary {
+  @apply bg-tactical-olive border-tactical-olive text-white hover:bg-tactical-olive/80;
+}
+
+.military-btn-outline {
+  @apply border-tactical-border text-slate-400 hover:border-slate-400 hover:text-white;
+}
